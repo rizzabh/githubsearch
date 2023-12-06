@@ -1,3 +1,10 @@
+Recent commit:
+![image](https://github.com/rizzabh/githubsearch/assets/133371863/2de6d906-8d05-4fac-aa66-0caf1d16b1d5)
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
