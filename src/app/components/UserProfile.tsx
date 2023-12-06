@@ -11,6 +11,7 @@ interface UserProfileProps {
     html_url: string;
     following: number;
     blog: string;
+    login: string;
     repos_url: string;
   };
 }
@@ -29,7 +30,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
           <div className="text-4xl font-bold text-gray-200 max-sm:text-2xl mb-1">
             {user.name}
           </div>
-          <div className="text-gray-400 text-md mb-1">@{user.name}</div>
+          <div className="text-gray-400 text-md mb-1">@{user.login}</div>
           <div className="text-gray-400 text-lg mb-3 max-sm:text-sm">
             {user.bio ? user.bio : "-No Bio Provided-"}
           </div>
@@ -44,17 +45,17 @@ const UserProfile = ({ user }: UserProfileProps) => {
               Following: {user.following}
             </div>
           </div>
-          <div className="mt-2 text-gray-400 px-2 py-1 w-fit rounded-md bg-gray-800 ">
+          <div className="mt-2 text-gray-400 px-2 py-1 w-fit rounded-md bg-gray-800 max-sm:text-xs ">
             Website:{" "}
             <a href={user.blog} className="underline">
               {user.blog ? user.blog : "No Website Provided"}
             </a>
           </div>
-          <div data-html2canvas-ignore="true" className="mt-4 text-md flex px-2 py-2 rounded-md border border-gray-500 hover:bg-gray-900 w-fit  max-sm:-ml-14 max-[440px]:-ml-24 max-[433px]:ml-0">
+          <div  className="mt-4 text-md flex px-2 py-2 rounded-md w-fit  max-sm:-ml-14 max-[440px]:-ml-24 max-[433px]:ml-0">
             <a
               href={user.html_url}
               target="_blank"
-              className="text-md font-normal"
+              className="text-md font-normal bg-gray-900 bg-opacity-50 hover:bg-opacity-100"
             >
               View Profile
             </a>
