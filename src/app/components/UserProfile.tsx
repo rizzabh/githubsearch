@@ -50,7 +50,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
               {user.blog ? user.blog : "No Website Provided"}
             </a>
           </div>
-          <div className="mt-4 text-md flex px-2 py-2 rounded-md border border-gray-500 hover:bg-gray-900 w-fit  max-sm:-ml-14 max-[440px]:-ml-24 max-[433px]:ml-0">
+          <div data-html2canvas-ignore="true" className="mt-4 text-md flex px-2 py-2 rounded-md border border-gray-500 hover:bg-gray-900 w-fit  max-sm:-ml-14 max-[440px]:-ml-24 max-[433px]:ml-0">
             <a
               href={user.html_url}
               target="_blank"
