@@ -23,7 +23,7 @@ const Repos = ({ reposUrl }) => {
     fetchRepos();
   }, [reposUrl]);
   return (
-    <div className="justify-center items-center">
+    <div className="justify-center items-center mt-10">
       <div>
         <Toaster />
       </div>
