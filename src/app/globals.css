@@ -48,3 +48,9 @@ body {
   top: 0;
   left: 1200px;
 }
+.textgrad{
+  background: linear-gradient(180deg, #7E83FA 33.93%, #1800b1 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
