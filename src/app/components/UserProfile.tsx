@@ -14,11 +14,11 @@ interface UserProfileProps {
 const UserProfile = ({ user }: UserProfileProps) => {
   return (
     <>
-    <div className="flex mx-auto my-9 p-5 bg-gray-700 bg-opacity-30 border border-gray-700 rounded-lg w-fit h-fit max-sm:mx-20 max-sm:w-fit max-sm:ml-10">
+    <div className="flex mx-auto my-9 p-5 bg-gray-700 bg-opacity-30 border border-gray-700 rounded-lg w-fit h-fit max-sm:mx-20 max-sm:w-10/12 max-sm:ml-10">
       <img
         src={user.avatar_url}
         alt={user.name}
-        className="w-3/12 rounded-xl shadow-xl object-cover max-sm:mb-36 max-sm:w-40 max-[1079px]:w-48"
+        className="w-3/12 rounded-xl shadow-xl object-cover max-sm:mb-36 max-[476px]:mb-48 max-sm:w-40 max-[1079px]:w-48"
       />
       <div className="ml-6">
         <div className="text-4xl font-bold text-gray-200 max-sm:text-2xl mb-1">
