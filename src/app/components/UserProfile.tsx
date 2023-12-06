@@ -1,6 +1,6 @@
 import React from "react";
 import Repos from "./Repos";
-
+import html2canvas from 'html2canvas';
 interface UserProfileProps {
   user: {
     avatar_url: string;
@@ -18,8 +18,8 @@ interface UserProfileProps {
 const UserProfile = ({ user }: UserProfileProps) => {
   return (
     
-    <>
-      <div className="flex max-[433px]:flex-col max-[433px]:ml-7 mx-auto my-9 p-5 bg-gray-700 bg-opacity-30 border border-gray-700 rounded-lg w-fit h-fit max-sm:mx-20 max-sm:w-10/12 max-sm:ml-10">
+    <div className="items-center justify-center">
+      <div id="capture" className="flex max-[433px]:flex-col max-[433px]:ml-7 mx-auto my-9 p-5 bg-gray-900  border border-gray-700 rounded-lg w-fit h-fit max-sm:mx-20 max-sm:w-10/12 max-sm:ml-10">
         <img
           src={user.avatar_url}
           alt={user.name}
@@ -62,10 +62,22 @@ const UserProfile = ({ user }: UserProfileProps) => {
           </div>
         </div>
         <div></div>
+        
       </div>
+      <div className="flex text-center px-2 py-1 border w-fit mx-auto border-gray-700 rounded-md text-gray-500 cursor-pointer hover:bg-gray-800"  onClick={() => {
+            html2canvas(document.querySelector("#capture")!, { imageTimeout: 20000, proxy:user.avatar_url }).then(canvas => {
+              var link = document.createElement('a');
+              link.download = 'my-profile.png';
+              link.href = canvas.toDataURL()
+              
+              link.click();
+            });
+          }}>
+          Download as .png <img src="/down.svg" alt="" className="ml-1" height={30} width={25}/>
+        </div>
       <Repos reposUrl = {user.repos_url} />
       
-    </>
+    </div>
   );
 };
 
