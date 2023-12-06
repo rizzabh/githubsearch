@@ -68,7 +68,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
       <div className="flex text-center px-2 py-1 border w-fit mx-auto border-gray-700 rounded-md text-gray-500 cursor-pointer hover:bg-gray-800"  onClick={() => {
             html2canvas(document.querySelector("#capture")!, { imageTimeout: 20000, proxy:user.avatar_url }).then(canvas => {
               var link = document.createElement('a');
-              link.download = 'my-profile.png';
+              link.download = `${user.name}.png`;
               link.href = canvas.toDataURL()
               
               link.click();
