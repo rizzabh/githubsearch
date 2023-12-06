@@ -15,8 +15,17 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 body {
+  height: 100vh;
+  width: 100vw;
+  background: no-repeat;
+  background-repeat: no-repeat;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -35,22 +44,24 @@ body {
 .gradient2{
   position: absolute;
   top: 0;
+  left: 500px;
 }
 
-.gradient3{
-  position: absolute;
- top: 0;
- left: 800px;
-}
 
-.gradient4{
-  position: absolute;
-  top: 0;
-  left: 1200px;
-}
 .textgrad{
   background: linear-gradient(180deg, #7E83FA 33.93%, #1800b1 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (max-width: 760px) {
+  
+
+
+  .gradient2{
+   display: none;
+  }
+  
 }
