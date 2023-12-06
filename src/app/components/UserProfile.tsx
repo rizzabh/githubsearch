@@ -14,13 +14,13 @@ interface UserProfileProps {
 const UserProfile = ({ user }: UserProfileProps) => {
   return (
     <>
-    <div className="flex mx-auto my-9 p-5 bg-gray-700 bg-opacity-30 border border-gray-700 rounded-lg w-fit h-fit max-sm:mx-20 max-sm:w-10/12 max-sm:ml-10">
+    <div className="flex max-[433px]:flex-col max-[433px]:ml-7 mx-auto my-9 p-5 bg-gray-700 bg-opacity-30 border border-gray-700 rounded-lg w-fit h-fit max-sm:mx-20 max-sm:w-10/12 max-sm:ml-10">
       <img
         src={user.avatar_url}
         alt={user.name}
-        className="w-3/12 rounded-xl shadow-xl object-cover max-sm:mb-36 max-[476px]:mb-48 max-sm:w-40 max-[1079px]:w-48"
+        className="w-3/12 rounded-xl shadow-xl object-cover max-sm:mb-36 max-[476px]:mb-48 max-sm:w-40 max-[1079px]:w-48 max-[433px]:mb-2"
       />
-      <div className="ml-6">
+      <div className="ml-6 max-[433px]:ml-2">
         <div className="text-4xl font-bold text-gray-200 max-sm:text-2xl mb-1">
           {user.name}
         </div>
@@ -39,7 +39,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
             Following: {user.following}
           </div>
         </div>
-        <div className="mt-6 text-md flex px-2 py-2 rounded-md border border-gray-500 hover:bg-gray-900 w-fit  max-sm:-ml-14" >
+        <div className="mt-6 text-md flex px-2 py-2 rounded-md border border-gray-500 hover:bg-gray-900 w-fit  max-sm:-ml-14 max-[440px]:-ml-24 max-[433px]:ml-0" >
           <a href={user.html_url} target="_blank" className="text-md font-normal">View Profile</a> 
           <img src="/arrow.svg" alt="" height={30} width={25}/>
         </div>
