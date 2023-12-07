@@ -51,7 +51,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
               {user.blog ? user.blog : "No Website Provided"}
             </a>
           </div>
-          <div  className="mt-4 text-md flex px-2 py-2 rounded-md w-fit  max-sm:-ml-14 max-[440px]:-ml-24 max-[433px]:ml-0">
+          <div data-html2canvas-ignore="true" className="mt-4 text-md flex px-2 py-2 rounded-md w-fit  max-sm:-ml-14 max-[440px]:-ml-24 max-[433px]:ml-0">
             <a
               href={user.html_url}
               target="_blank"
@@ -65,7 +65,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
         <div></div>
         
       </div>
-      <div className="flex text-center px-2 py-1 border w-fit mx-auto border-gray-700 rounded-md text-gray-500 cursor-pointer hover:bg-gray-800"  onClick={() => {
+      <div className="flex text-center px-2 py-1 border w-fit mx-auto border-gray-700 rounded-md text-gray-400 cursor-pointer hover:bg-gray-800"  onClick={() => {
             html2canvas(document.querySelector("#capture")!, { imageTimeout: 20000, proxy:user.avatar_url }).then(canvas => {
               var link = document.createElement('a');
               link.download = `${user.name}.png`;
