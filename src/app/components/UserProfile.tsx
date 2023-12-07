@@ -47,7 +47,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
           </div>
           <div className="mt-2 text-gray-400 px-2 py-1 w-fit rounded-md bg-gray-800 max-sm:text-xs ">
             Website:{" "}
-            <a href={user.blog} className="underline">
+            <a href={user.blog} className="bold">
               {user.blog ? user.blog : "No Website Provided"}
             </a>
           </div>
