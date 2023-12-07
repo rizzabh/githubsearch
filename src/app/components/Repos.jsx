@@ -41,7 +41,7 @@ const Repos = ({ reposUrl }) => {
                 key={repo.id}
                 className="px-4 py-3 bg-transparent border border-gray-700 rounded-md w-11/12 mx-auto hover:bg-gray-800 transition-all ease-in mb-4"
               >
-                <div className="flex items-center">
+                <div className="flex items-center max-[1255px]:block ">
                   <Link
                     href={repo.html_url}
                     className="text-lg font-bold hover:underline max-md:text-sm"
@@ -49,7 +49,7 @@ const Repos = ({ reposUrl }) => {
                     {repo.name}
                   </Link>
                   {repo.fork ? (
-                    <div className="text-sm font-light text-gray-400 max-sm:text-xs ml-1">
+                    <div className="text-sm font-light text-gray-400 max-sm:text-xs ml-1 max-[1255px]:ml-0">
                       Forked
                     </div>
                   ) : null}
