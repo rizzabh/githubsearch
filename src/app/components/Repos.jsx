@@ -41,17 +41,19 @@ const Repos = ({ reposUrl }) => {
                 key={repo.id}
                 className="px-4 py-3 bg-transparent border border-gray-700 rounded-md w-11/12 mx-auto hover:bg-gray-800 transition-all ease-in mb-4"
               >
-                <Link
-                  href={repo.html_url}
-                  className="text-lg font-bold hover:underline max-md:text-sm"
-                >
-                  {repo.name}
-                </Link>
-                {repo.fork ? (
-                  <div className="text-sm font-light text-gray-400 max-sm:text-xs">
-                    Forked
-                  </div>
-                ) : null}
+                <div className="flex items-center">
+                  <Link
+                    href={repo.html_url}
+                    className="text-lg font-bold hover:underline max-md:text-sm"
+                  >
+                    {repo.name}
+                  </Link>
+                  {repo.fork ? (
+                    <div className="text-sm font-light text-gray-400 max-sm:text-xs ml-1">
+                      Forked
+                    </div>
+                  ) : null}
+                </div>
                 <div
                   className={`text-md mr-2 px-2 py-1 rounded-md bg-blue-700 bg-opacity-30 font-light text-blue-300 max-sm:text-xs w-fit mt-2 ${
                     !repo.language && "bg-red-800 text-red-600"
