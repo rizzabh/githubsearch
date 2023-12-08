@@ -1,4 +1,5 @@
 # GitHub Searcher
+Demo Link: https://githubsearch-six.vercel.app/ 
 
 GitHub Searcher is a web application that allows users to search for a GitHub user and generate a visually appealing user card along with a list of repositories. The user card includes essential information such as the user's name, username, followers, followings, public repositories, website link, and a link button to the user's GitHub profile. Additionally, there is a feature to download the rendered card as a PNG using the `html2canvas` library.
 
