@@ -19,7 +19,6 @@ const Searchbar = ({setUser, setLoader}:{setUser: any, setLoader:any}) => {
                
         } catch (error) {
             console.log(error)
-            toast.error('Something went wrong')
         } finally{
             setLoader(false);
         }

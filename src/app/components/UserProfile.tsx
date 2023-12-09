@@ -20,7 +20,7 @@ const UserProfile = ({ user }: UserProfileProps) => {
   return (
     
     <div className="items-center justify-center">
-      <div id="capture" className="flex max-[433px]:flex-col max-[433px]:ml-7 mx-auto my-9 p-5 bg-gray-900  border border-gray-700 rounded-lg w-fit h-fit max-sm:mx-20 max-sm:w-10/12 max-sm:ml-10">
+      <div id="capture" className="flex max-[433px]:flex-col max-[433px]:ml-7 mx-auto my-9 p-5 bg-gray-900  border border-gray-700 w-fit h-fit max-sm:mx-20 max-sm:w-10/12 max-sm:ml-10">
         <img
           src={user.avatar_url}
           alt={user.name}
