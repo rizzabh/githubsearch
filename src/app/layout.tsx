@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -25,7 +26,7 @@ export default function RootLayout({
         <div className="gradient2 -z-10">
           <img src="/Group 2.png" alt="" />
         </div>
-        
+        <Analytics />
         
       </body>
     </html>
