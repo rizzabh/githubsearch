@@ -11,7 +11,18 @@ export default function Home() {
 
   return (
     <main className="min-h-screen ">
-      <Navbar />
+      {user? <Navbar user={user} /> : <Navbar user={{
+        avatar_url: "",
+        name: "",
+        public_repos: 0,
+        bio: "",
+        followers: 0,
+        html_url: "",
+        following: 0,
+        blog: "",
+        login: "",
+        repos_url: ""
+      }} />}
       <Searchbar setUser={(res: any) => setUser(res)} setLoader={setLoader} />
       {user && <UserProfile user={user} />}
     </main>
