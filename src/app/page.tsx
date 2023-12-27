@@ -11,17 +11,17 @@ export default function Home() {
 
   return (
     <main className="min-h-screen ">
-      {user? <Navbar user={user} /> : <Navbar user={{
-        avatar_url: "",
-        name: "",
+      {<Navbar user={{
+        avatar_url: "https://api.github.com/users/rizzabh/avatar_url",
+        name: "https://api.github.com/users/rizzabh/name",
         public_repos: 0,
-        bio: "",
+        bio: "https://api.github.com/users/rizzabh/bio",
         followers: 0,
-        html_url: "",
+        html_url: "https://api.github.com/users/rizzabh/html_url",
         following: 0,
-        blog: "",
-        login: "",
-        repos_url: ""
+        blog: "https://api.github.com/users/rizzabh/blog",
+        login: "https://api.github.com/users/rizzabh/login",
+        repos_url: "https://api.github.com/users/rizzabh/repos_url"
       }} />}
       <Searchbar setUser={(res: any) => setUser(res)} setLoader={setLoader} />
       {user && <UserProfile user={user} />}
